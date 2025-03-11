@@ -1,0 +1,76 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+
+
+
+
+<div class="container">
+    
+    <!-- <h1>{{title}}</h1> -->
+
+    <div class="py-10 row">
+        
+
+        <div class="col-sm-2 py-10">
+            <img src="{{image}}" alt=""class="py-10 w-100">
+        </div>
+        <div class="col ">
+            <h1>{{title}}</h1>
+
+            <p>{{author}}</p>
+            {%- if status == 'Available' -%}
+
+           <p class="font-weight-bold">Available</p>
+            {%- elif status == 'Issued' -%}
+
+            <p class="font-weight-bold">Issued</p>
+
+            {%- endif -%}
+            <p>Publisher: {{ publisher }}</p>
+            <p>ISBN: {{ isbn }}</p>
+            <p>        {{description}}
+            </p>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- <h1>{{title}}</h1> -->
+<!-- <img src="{{image}}" alt="">
+
+
+{{ title }}
+===========
+
+
+By {{ author }}
+
+
+
+
+ {%- if status == 'Available' -%}
+
+ Available
+ {%- elif status == 'Issued' -%}
+
+ Issued
+
+ {%- endif -%}
+
+
+
+Publisher: **{{ publisher }}**
+ISBN: **{{ isbn }}**
+
+{{ description }} -->
+
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->
